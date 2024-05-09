@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif; /* Set a common font family */
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px; /* Center the container vertically */
+        }
+
+        h1 {
+            color: #333; /* Dark gray text */
+        }
+
+        #number {
+            font-size: 80px; /* Larger font size for the number */
+            color: #007bff; /* Blue color for the number */
+            margin-bottom: 20px; /* Add some space below the number */
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+        }
+
+        button {
+            padding: 10px 20px; /* Add some padding to the buttons */
+            margin: 0 10px; /* Add space between buttons */
+            font-size: 16px; /* Set font size for buttons */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Add some rounded corners to buttons */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            color: #fff; /* White text on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <div id="number">0</div>
+        <div id="buttons">
+            <button onclick="decrease()">Decrease</button>
+            <button onclick="resetNumber()">Reset</button>
+            <button onclick="increase()">Increase</button>
+        </div>
+    </div>
+
+    <script>
+        var numberElement = document.getElementById("number");
+        var number = 0;
+
+        function decrease() {
+            number--;
+            numberElement.innerHTML = number;
+        }
+
+        function increase() {
+            number++;
+            numberElement.innerHTML = number;
+        }
+
+        function resetNumber() {
+            number = 0;
+            numberElement.innerHTML = number;
+        }
+    </script>
+</body>
+</html>
